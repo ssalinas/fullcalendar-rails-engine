@@ -17,4 +17,4 @@ FullcalendarEngine::Configuration = {
   'mount_path' => 'admin/calendar'
 }
 FullcalendarEngine::Configuration.merge!(config)
-FullcalendarEngine::Configuration['events'] = "admin/calendar/events/get_events"
+FullcalendarEngine::Configuration['events'] = "/admin/calendar/events/get_events"
