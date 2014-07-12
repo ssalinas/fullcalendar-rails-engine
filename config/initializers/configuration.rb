@@ -1,7 +1,7 @@
 FULLCALENDAR_FILE_PATH = Rails.root.join('config', 'fullcalendar.yml')
 config = File.exists?(FULLCALENDAR_FILE_PATH) ? YAML.load_file(FULLCALENDAR_FILE_PATH) || {} : {}
 FullcalendarEngine::Configuration = {
-  'editable'    => false,
+  'editable'    => true,
   'header'      => {
     left: 'prev,next today',
     center: 'title',
@@ -17,4 +17,4 @@ FullcalendarEngine::Configuration = {
   'mount_path' => 'admin/calendar'
 }
 FullcalendarEngine::Configuration.merge!(config)
-FullcalendarEngine::Configuration['events'] = "/admin/calendar/events/get_events"
+FullcalendarEngine::Configuration['events'] = "/calendar/events/get_events"
